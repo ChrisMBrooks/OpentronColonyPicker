@@ -17,8 +17,8 @@ class Camera():
         self.filename = self.config["server"]["filename"]
         self.pi_os = self.is_pi_os()
         if self.is_pi_os():
-            from picamera import PiCamera
-            self.pi_camera = PiCamera()
+            from picamera2 import Picamera2
+            self.pi_camera = PiCamera2()
             self.root = self.config["server"]["raspi_root"]
         else:
             self.root = self.config["server"]["mac_root"]
@@ -29,7 +29,7 @@ class Camera():
     def capture(self):
         self.file_housekeeping()
         if self.pi_os:
-            self.pi_camera.capture(self.full_path)
+            self.pi_camera.start_and_capture_file(self.full_path)
         else: 
             self.get_mac_cam_image()
             
