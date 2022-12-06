@@ -23,9 +23,9 @@ def get_test_image():
 
 @app.route("/image")
 def get_image():
-    light_table().turn_arduino_on()
+    light_table.turn_arduino_on()
     full_path = camera.capture()
-    light_table().turn_arduino_on()
+    light_table.turn_arduino_on()
     return send_file(full_path, as_attachment=True)
 
 @app.route("/os")

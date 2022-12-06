@@ -1,12 +1,6 @@
 {
-    "client":{
-        "root":"/Users/chrismbrooks/Documents/Imperial/OpentronColonyPicker",
-        "filename":"image.jpg",
-        "server_url_root" : "http://127.0.0.1:5000/image"
-    },
     "server":{
-        "mac_root":"/Users/chrismbrooks/Documents/Imperial/OpentronColonyPicker",
-        "raspi_root":"/home/pi/Desktop/OpentronColonyPicker",
+        "root":"/home/admin/Documents/OpentronColonyPicker",
         "filename":"image.jpg"
     }
 }

@@ -1,0 +1,17 @@
+{
+    "client":{
+        "root":"/Users/chrismbrooks/Documents/Imperial/OpentronColonyPicker",
+        "filename":"image.jpg",
+        "server_url_root" : "http://192.168.1.124:5000/image"
+    },
+    "server":{
+        "mac_root":"/Users/chrismbrooks/Documents/Imperial/OpentronColonyPicker",
+        "raspi_root":"/home/pi/Desktop/OpentronColonyPicker",
+        "filename":"image.jpg"
+    },
+    "man_in_the_middle":{
+        "root":"/Users/chrismbrooks/Documents/Imperial/OpentronColonyPicker",
+        "filename":"image.jpg",
+        "pi_cam_server_url_root" : "http://192.168.1.124:5000"
+    }
+}
