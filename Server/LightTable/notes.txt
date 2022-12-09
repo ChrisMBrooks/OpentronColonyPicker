@@ -1,0 +1,5 @@
+https://opensource.com/article/20/5/usb-port-raspberry-pi-python
+
+How to find the USB COM port id:
+
+python -m serial.tools.miniterm

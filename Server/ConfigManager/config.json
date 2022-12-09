@@ -1,6 +1,7 @@
 {
     "server":{
-        "root":"/home/admin/Documents/OpentronColonyPicker",
-        "filename":"image.jpg"
+        "root":"/home/cmb22/Documents/OpentronColonyPicker",
+        "filename":"image.jpg",
+	"usb_port_id":"/dev/ttyACM0"
     }
 }

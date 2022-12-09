@@ -1,1 +1,4 @@
-python3 -m flask run
+auto start at bootup by editing the etc profile: 
+sudo nano /etc/profile
+
+sudo python3 /home/cmb22/Documents/OpentronColonyPicker/Server/wsgi.py

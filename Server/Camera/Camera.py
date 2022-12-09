@@ -12,13 +12,15 @@ class Camera():
         self.pi_camera = Picamera2()
         self.capture_config = self.pi_camera.create_still_configuration()
         self.root = self.config["server"]["root"]
-        self.full_path = self.root + "/" + "Temp" + "/" + self.filename
+        self.full_path = self.root + "/Temp/" + self.filename
         print(self.full_path)
     
     def capture(self):
         self.file_housekeeping()        
         self.pi_camera.start(show_preview=False)
-        self.pi_camera.switch_mode_and_capture_file(self.capture_config, self.full_path)
+        self.pi_camera.switch_mode_and_capture_file(
+            self.capture_config, self.full_path)
+        
         self.pi_camera.stop()
         return self.full_path
 
