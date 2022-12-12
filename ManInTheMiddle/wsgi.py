@@ -26,13 +26,14 @@ def get_pi_cam_os():
 @app.route("/pi-cam-image")
 def get_pi_cam_image():
     image_file_location = cam_client.get_image_from_server()
+    image_file_location = cam_client.crop_image(image_path=image_file_location)
     return send_file(image_file_location, as_attachment=True) 
 
 @app.route("/colony-locations")
 def get_colony_locations():
     image_file_location = cam_client.get_image_from_server()
     xys_file_locations = neural_net_client.get_locations(image_file_location)
-    return json.dumps(xys_file_locations)
+    return {"colony_locations":xys_file_locations}
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=config['man_in_the_middle']['host_port'])

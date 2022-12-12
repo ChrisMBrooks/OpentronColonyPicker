@@ -48,12 +48,12 @@ class NeuralNetClient():
             self.PATH_TO_LABELS, use_display_name=True)
 
     def get_locations(self, full_path_filename:str):
-
-        return self.process_single_file(self, full_path_filename)
+        return self.process_single_file(full_path_filename)
 
     def process_single_file(self, image_path):
 
         image = Image.open(image_path)
+        image = self.crop_image(image)
         # the array based representation of the image will be used later in order to prepare the
         # result image with boxes and labels on it.
         image_np = self.load_image_into_numpy_array(image)
@@ -112,6 +112,18 @@ class NeuralNetClient():
         for dirpath, _, filenames in os.walk(directory):
             for f in filenames:
                 yield os.path.abspath(os.path.join(dirpath, f))
+    
+    def crop_image(self, image:Image): 
+        width, height = image.size 
+        crop_details = self.config[ "man_in_the_middle"]["crop_details"]
+
+        #Crop Box Positions 
+        left = width*float(crop_details["left"]) 
+        top = height*float(crop_details["top"])
+        right = width - width*float(crop_details["right"])
+        bottom = height - height*float(crop_details["bottom"])
+
+        return image.crop((left, top, right, bottom)) 
     
     def run_inference_for_single_image(self, image, graph):
         with graph.as_default():

@@ -1,8 +1,14 @@
 {
     "man_in_the_middle":{
-        "root":"/Users/chrismbrooks/Documents/Imperial/OpentronColonyPicker",
+        "root":"C:\\OpentronColonyPicker",
         "filename":"image.jpg",
-        "pi_cam_server_url_root" : "http://192.168.1.124:5000",
-        "host_port":"4444"
+        "pi_cam_server_url_root" : "http://10.0.0.2:5000",
+        "host_port":"4444",
+        "crop_details":{
+            "left": "0.2",
+            "top": "0.15",
+            "right": "0.22",
+            "bottom": "0.3"
+        }
     }
 }
