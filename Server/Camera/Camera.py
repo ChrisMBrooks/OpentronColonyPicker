@@ -1,3 +1,8 @@
+#############################################################
+# Controller Class for Managing Communcation w/
+# the Pi Cam HQ Hardware
+#############################################################
+
 import os
 import platform
 from picamera2 import Picamera2

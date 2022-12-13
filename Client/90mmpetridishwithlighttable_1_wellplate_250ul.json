@@ -1,0 +1,58 @@
+{
+    "ordering": [
+        [
+            "A1"
+        ]
+    ],
+    "brand": {
+        "brand": "90mm petri dish with light table ",
+        "brandId": []
+    },
+    "metadata": {
+        "displayName": "90mm Petri Dish With Light Table 1 Well Plate 250 µL",
+        "displayCategory": "wellPlate",
+        "displayVolumeUnits": "µL",
+        "tags": []
+    },
+    "dimensions": {
+        "xDimension": 127,
+        "yDimension": 85,
+        "zDimension": 74.01
+    },
+    "wells": {
+        "A1": {
+            "depth": 19.1,
+            "totalLiquidVolume": 250,
+            "shape": "circular",
+            "diameter": 6,
+            "x": 14,
+            "y": 74,
+            "z": 54.91
+        }
+    },
+    "groups": [
+        {
+            "metadata": {
+                "wellBottomShape": "flat"
+            },
+            "wells": [
+                "A1"
+            ]
+        }
+    ],
+    "parameters": {
+        "format": "irregular",
+        "quirks": [],
+        "isTiprack": false,
+        "isMagneticModuleCompatible": false,
+        "loadName": "90mmpetridishwithlighttable_1_wellplate_250ul"
+    },
+    "namespace": "custom_beta",
+    "version": 1,
+    "schemaVersion": 2,
+    "cornerOffsetFromSlot": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    }
+}

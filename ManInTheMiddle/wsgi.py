@@ -1,3 +1,10 @@
+#############################################################
+# Micro Webservice for Pass through communication & 
+# Tensfor flow model processing.
+# Configuration details are managed in confgi.json. 
+# To be run on the RasPi. 
+#############################################################
+
 from flask import Flask
 from flask import send_file
 

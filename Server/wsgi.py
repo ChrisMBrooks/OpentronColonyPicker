@@ -1,3 +1,9 @@
+#############################################################
+# Micro Webservice for Controlling Camera & Light Table.
+# Configuration details are managed in confgi.json. 
+# To be run on the RasPi. 
+#############################################################
+
 import os
 import platform
 from flask import Flask

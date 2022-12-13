@@ -4,7 +4,7 @@ The following hardware and software solution is a 3rd party, open source add-on 
 ## Software
 
 ### OT-2 Client
-A Jupyter Notebook file for orchestrating the automation protcol including REST API data retrieval, calibration and precision control of the OT-2 P300 single channel pipette used to pick colonies. 
+A Jupyter Notebook file for orchestrating the colony picking protcol including REST API data retrieval, calibration and precision control of the OT-2 P300 single channel pipette used to pick colonies. 
 
 #### Installation & Configuration
 Simply import the Jupyter notebook file onto the native Jupyter server hosted on OT-2 robot.
@@ -12,9 +12,9 @@ Simply import the Jupyter notebook file onto the native Jupyter server hosted on
 A custome Labware definitionf file is also provided and must be manually imported using the OT-2 Host PC application. 
 
 #### Dependencies
-Python3 including the following packages: Opentron
+Python3 including the following packages: opentrons
 
-### ManInTheMiddle
+### ManInTheMiddle Client-Server
 A micro REST-style API to facilitate information exchange between the PiCam API and the OT-2 Client. The client also uses TensorFlow to detect potential colonies and return the corresponding x,y location coordinates.  
 
 The pre-trained TensorFlow model, NeuralNetClient\frozen_inference_graph.pb, was adopted from the from the iGEMMarburg2019 project ([Link](https://2019.igem.org/Team:Marburg)).
@@ -62,6 +62,20 @@ Python3 including the following packages: Flask, PiCamera2, PySerial, Requests
 ## Hardware
 The CAD files for the camera mount & light table are included as STL files. The hardware design was adopted from the iGEMMarburg2019 project ([Link](https://2019.igem.org/Team:Marburg)).
 
+The solution also incorporates an Arduino Uno microcontroller for operation of the light table. 
+
+#### Parts List
+
+* RasPi 4 & Peripherals (SD card, USB-C power cable, keyboard, mouse, etc.)
+* Arduino Uno, Led Strips & Breadboard, USB A-B cable
+* PiCam HQ + Lens
+* 130mm x 86 mm x 3 mm Frosted Acrylic Sheet
+* Nuts and Bolts for Camera Mounts
+
+#### Optional - Networking Parts List
+* Ethernet Switch 
+* USB-to-Ethernet Converter 
+* 2 CAT-6 Ethernet Cables 
 
 ### Authors and Copyright
 Imperial Systems & Synthetic Biology (SSB) MRes - 2022

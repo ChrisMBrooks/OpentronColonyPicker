@@ -1,3 +1,10 @@
+#############################################################
+# A wrapper class for the Tensorflow code & model 
+# adopted from the iGemMarburg2019 Team
+# https://github.com/igemsoftware2019/iGemMarburg2019/tree/master/Hardware
+# 
+#############################################################
+
 import numpy as np
 import os
 import six.moves.urllib as urllib
